@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.nav-home-page{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 150px;
+    top: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 12;
+}
+.img-logo{
+    width:120px;
+}
+.img-logo img{
+    width: 100%;
+}
+.first-section{
+    background: url(images/ao_dong_tan.jpeg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.home-title{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.home-title h1{
+    font-size: 120px;
+    color: #0589D4;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.home-title h2{
+    font-size: 80px;
+    line-height: 10px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.first-section input{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 38px;
+    outline: none;
+    border: 3px solid #1A2539;
+    border-radius: 10px;
+    background: #1A2539;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 100px;
+    position: absolute;
+    top: 58%;
+}
+
+.first-section input:hover{
+    font-size: 28px;
+    background: none;
+    color: #1A2539;
+    transition: all 0.3s ease;
+}
+.join-text{
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    transition: all 0.3s ease;
+    background: #1A2539;
+}
+#second-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(148,201,255);
+    background: radial-gradient(circle, rgba(148,201,255,1) 0%, rgba(6,38,77,1) 100%);
+}
+#second-section p{
+    font-family: 'Pridi', serif;
+}
+.head-text p{
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+.district{
+    background: #1A2539;
+    text-align: center;
+    margin-top: 35px;
+    padding: 5px 10px;
+}
+.district p{
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+}
+.wrapper-card{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.wrapper-card.first-row{
+    margin-top: 30px;
+}
+.wrapper-card.first-last-row {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+.wrapper-card.mid-row{
+    margin-top: 12px;
+}
+.wrapper-card.last-row{
+    margin-top: 12px;
+    margin-bottom: 80px;
+}
+.travel-card{
+    width: 400px;
+    height: 340px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.travel-card:hover{ 
+    background: #1A2539;
+    transition: all 0.3s ease;
+    width: 450px;
+    .card-title p{ color: #fff; }
+    .locate p, i{ color: #ffffffb6;}
+}
+.travel-card img{
+    width: 100%;
+    height: 250px;
+}
+.travel-card a{
+    text-decoration: none;
+    outline: none;
+}
+.card-title p{
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+.travel-card .card-title{
+    margin-top: 5px;
+}
+.travel-card .locate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: -5px;
+    color: #494949d0;
+}
