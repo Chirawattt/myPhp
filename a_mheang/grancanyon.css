@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(../images/a_mheang/grandcanyon/grandcanyon0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 80px 30px 20px 30px;
+}
+.nav-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 150px;
+    position: absolute;
+    top: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.575) 0%, rgba(255,255,255,0) 100%);
+}
+.img-logo{ width:100px; }
+.img-logo img{ 
+    width: 100%;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.2));
+}
+.wrapper-text{
+    width: 100%;
+    padding-left: 4%;
+    display: flex;
+}
+.hl, .title p, .detail p, .map iframe, .carousel{ transition: all 0.4s ease; }
+.wrapper-text .title{
+    margin-bottom: 25px;
+}
+.wrapper-text .title p{
+    color: #fff;
+    font-size: 68px;
+    font-weight: 600;
+    letter-spacing: -4px;
+    line-height: 65px;
+}
+.hl{
+    width: 200px;
+    border-top: 6px solid white;
+    border-radius: 2px;
+    margin-bottom: 25px;
+}
+.detail{
+    color: #fff;
+    width: 65%;
+}
+.detail p{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.wrapper-map{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+.map {
+    width: 360px;
+    padding: 0px 30px 5px 25px;
+}
+.map-title{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.map-title p{
+    font-size: 30px;
+    font-weight: 500;
+}
+.map iframe{
+    width: 100%; 
+    height: 250px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.wrapper-gallery{
+    max-width: 1200px;
+    position: relative;
+    margin-top: 8%;
+}
+.wrapper-gallery i{
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    list-style: none;
+    background: #1A2539;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 20;
+    color: #fff;
+}
+
+.wrapper-gallery .carousel{
+    font-size: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 240px;
+}
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img{
+    pointer-events: none;
+}
+.carousel img{
+    height: 230px;
+    width: calc(100% / 3);
+    object-fit: cover;
+    margin-left: 3px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.9));
+    border-radius: 5px;
+}
+.wrapper-gallery i:first-child{
+    left: -23px;
+    display: none;
+}
+.wrapper-gallery i:last-child{
+    right: -23px;
+}
+.carousel img:first-child{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 900px){
+    .carousel img{ width: calc(100% /2);}
+}
+@media screen and (max-width: 550px){
+    .carousel img{ width: 100%;}
+}
