@@ -1,0 +1,208 @@
+/* homepage.php style sheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #ebebeb;
+    padding: 20px 0px;
+}
+.header h1{
+    font-size: 20px;
+}
+.container{
+    padding: 55px 80px;
+    width: 100%;
+    display: flex;
+}
+.left-side{
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-face{
+    width: 100%;
+    height: 300px;
+    background: url(my-face.jpg);
+    background-size: 150%;
+    background-position: 45% 55%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    position: relative;
+}
+.img-face p{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+}
+.topic{
+    margin: 40px 0px 25px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.topic p{
+    font-size: 14px;
+    color: #b4b4b4;
+    font-weight: 600;
+}
+.topic hr{
+    width: 100%;
+    height: 4px;
+    background: #ebebeb;
+    border: none;
+}
+.work-title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.work-title span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.work-title .box{
+    padding: 8px 12px;
+    background: #d3edff;
+    border-radius: 5px;
+    margin-left: auto;
+}
+.work-title .box p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #006bc2;
+}
+.skill-detail{
+    width: 100%;
+
+}
+.skill-detail p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.right-side{
+    margin-left: 180px;
+}
+.wrapper-name{
+    display: flex;
+    align-items: center;
+}
+.name p{
+    font-size: 36px;
+    font-weight: 600;
+}
+.location{
+    display: flex;
+    color:#8f8f8f;
+    gap: 5px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.location p{
+    font-weight: 500;
+    line-height: 20px;
+}
+.bottom-of-name p{
+    color: #006bc2;
+    font-size: 16px;
+    font-weight: 600;
+}
+.study-thing{
+    margin-top: 35px;
+}
+.study-thing .title p{
+    color: #8f8f8f;
+    font-weight: 600;
+}
+.wrapper-study{
+    margin-top: 5px;
+}
+.wrapper-study .study{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.wrapper-study .study p:first-child{
+    width: 160px;
+    font-weight: 500;
+    background: #d3edff;
+    color: #006bc2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.wrapper-study .study p:last-child{
+    font-weight: 600;
+    margin-left: 25px;
+}
+.bottom-wrapper {
+    margin-top: 20px;
+}
+.bottom-wrapper .title p{
+    color: #8f8f8f;
+    font-weight: 600;
+}
+.aboutme{
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+.aboutme p:first-child{
+    width: 160px;
+    font-weight: 500;
+    background: #dadada;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.aboutme p:last-child{
+    font-weight: 500;
+    margin-left: 23px;
+}
+.mywebsite{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+.mywebsite a{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #006bc2;
+    background: #d3edff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.mywebsite a:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}

@@ -1,0 +1,25 @@
+body{
+    background: #f5f1f1;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+}
+i#highlight{ /* id selector */
+    color: rgb(0, 204, 255);
+}
+h1.title{ /* class selector */
+    background: #000;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+h1.title:hover{ /* Pseudo-class */
+    background: #f5f1f1;
+    color: #000;
+    transition: all .3s ease;
+}
+pre:first-line{ /* Pseudo-element */
+    color: brown;
+    font-weight: 600;
+}
