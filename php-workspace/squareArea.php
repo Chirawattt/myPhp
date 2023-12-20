@@ -29,7 +29,7 @@
                 <td align='right'>$result</td>
             </tr>
             <tr>
-                <td colspan='2' align='center'><a href='homepage.php'>กลับ</a></td>
+                <td colspan='2' align='center'><a href='menuArea.php'>กลับ</a></td>
             </tr>
         </table>";
     ?>
