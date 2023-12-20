@@ -23,11 +23,11 @@
                 <th>ค่า</th>
             </tr>
             <tr>
-                <td align='left'>ค่าความยาวฐาน</td>
+                <td align='left'>ความยาวฐาน</td>
                 <td align='center'>$base</td>
             </tr>
             <tr>
-                <td align='left'>ค่าความสูง</td>
+                <td align='left'>ความสูง</td>
                 <td align='center'>$height</td>
             </tr>
             <tr>

@@ -18,13 +18,13 @@ body{
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid #ebebeb;
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 .header h1{
     font-size: 20px;
 }
 .container{
-    padding: 55px 80px 15px 80px;
+    padding: 35px 80px 15px 80px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -189,9 +189,13 @@ body{
     margin-left: 23px;
 }
 .toAnotherPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 40px;
     width: 100%;
     text-align: center;
+    gap: 25px;
 }
 .toAnotherPage a{
     font-size: 20px;

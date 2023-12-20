@@ -23,11 +23,11 @@
                 <th>ค่า</th>
             </tr>
             <tr>
-                <td align='left'>ค่ารัศมี</td>
+                <td align='left'>รัศมี</td>
                 <td align='center'>$r</td>
             </tr>
             <tr>
-                <td align='left'>ค่าพาย</td>
+                <td align='left'>พาย</td>
                 <td align='center'>$PI</td>
             </tr>
             <tr>

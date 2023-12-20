@@ -24,15 +24,15 @@
                 <th>ค่า</th>
             </tr>
             <tr>
-                <td align='left'>ค่าความสูง</td>
+                <td align='left'>ความสูง</td>
                 <td align='center'>$height</td>
             </tr>
             <tr>
-                <td align='left'>ค่าความยาวเส้นคู่ขนาน 1</td>
+                <td align='left'>ความยาวเส้นคู่ขนาน 1</td>
                 <td align='center'>$base1</td>
             </tr>
             <tr>
-                <td align='left'>ค่าความยาวเส้นคู่ขนาน 2</td>
+                <td align='left'>ความยาวเส้นคู่ขนาน 2</td>
                 <td align='center'>$base2</td>
             </tr>
             <tr>
