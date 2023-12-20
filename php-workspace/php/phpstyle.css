@@ -24,9 +24,11 @@ body{
     font-size: 20px;
 }
 .container{
-    padding: 55px 80px;
+    padding: 55px 80px 15px 80px;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .left-side{
     width: 420px;
@@ -38,7 +40,7 @@ body{
 .img-face{
     width: 100%;
     height: 300px;
-    background: url(my-face.jpg);
+    background: url(img/my-face.jpg);
     background-size: 150%;
     background-position: 45% 55%;
     background-repeat: no-repeat;
@@ -106,7 +108,7 @@ body{
 }
 
 .right-side{
-    margin-left: 180px;
+    margin-left: 120px;
 }
 .wrapper-name{
     display: flex;
@@ -186,12 +188,12 @@ body{
     font-weight: 500;
     margin-left: 23px;
 }
-.mywebsite{
+.toAnotherPage{
     margin-top: 40px;
     width: 100%;
     text-align: center;
 }
-.mywebsite a{
+.toAnotherPage a{
     font-size: 20px;
     font-weight: 600;
     padding: 10px 20px;
@@ -201,7 +203,7 @@ body{
     text-decoration: none;
     transition: all .3s ease;
 }
-.mywebsite a:hover{
+.toAnotherPage a:hover{
     background: #000;
     color: #fff;
     transition: all .3s ease;

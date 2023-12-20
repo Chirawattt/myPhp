@@ -180,3 +180,29 @@ body{
     margin-top: -5px;
     color: #494949d0;
 }
+#third-section{
+    width: 100%;
+    background: #000;
+    padding: 30px;
+}
+.link-to-page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-to-page a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.link-to-page a:hover{
+    text-decoration: underline;
+    color: #000;
+    background: #fff;
+    transition: all .3s ease;
+}

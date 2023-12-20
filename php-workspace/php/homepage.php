@@ -158,12 +158,10 @@
                         <div class="title"><p>};</p></div>
                     </div>
             </div>
-        <div class="mywebsite">
-            <a href="Travel_Website/home.html">Visit my travel website</a>
-        </div>
+        <div class="toAnotherPage">
+            <a href="../Travel-website/home.html">My travel website</a>
+            <a href="menuArea.php">My Calc area website</a>
         </div>
     </div>
-
-    
 </body>
 </html>
