@@ -160,7 +160,7 @@
             </div>
         <div class="toAnotherPage">
             <a href="../Travel-website/home.html">My travel website</a>
-            <a href="menuArea.php">My Calc area website</a>
+            <a href="php-lecture/homework/calArea.php">My Calc area website</a>
         </div>
     </div>
 </body>
