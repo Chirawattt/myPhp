@@ -1,0 +1,179 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mitr", sans-serif;
+}
+body{
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #283048, #859398);
+    flex-direction: column;
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: 5px;
+}
+.container .form{
+    margin-top: 30px;
+}
+.form .input-head-title{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-head-title .title{
+    font-size: 20px;
+    color: #707070;
+    background: #fff;
+    padding: 0 15px;
+    z-index: 20;
+    border-radius: 50%;
+}
+.input-head-title .line{
+    width: 100%;
+    height: 3px;
+    background: #707070;
+    position: absolute;
+    border-radius: 20px;
+}
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+.require{
+    color: #bb3335;
+}
+.input-box label{
+    color: #333;
+}
+.form :where(.input-box input, .select-box){
+    position: relative;
+    margin-top: 3px;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.input-box input:focus{
+    box-shadow: 1px 1px 1px rgba(0, 160, 85, 0.473);
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.form .cl-house{
+    margin-top: -10px;
+}
+.form .gender-box{
+    margin-top: 20px;
+}
+.gender-box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.form .gender{
+    column-gap: 5px;
+}
+.gender input{
+    accent-color: #2FB799;
+}
+.form :where(.gender input, .gender label) {
+    cursor: pointer;
+}
+.select-box select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+ul.hobby-wrapper{
+    display: flex;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 8px;
+    justify-content: center;
+}
+.hobby-wrapper .hobby{
+    list-style: none;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hobby-wrapper input{
+    accent-color: #2FB799;
+}
+.hobby-wrapper .hobby:checked{
+    background: #209279;
+}
+.btn-wrapper{
+    width: 100%;
+    display: flex;
+    column-gap: 8px;
+    margin-top: 30px;
+}
+.btn-wrapper input{
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+.btn-wrapper input[type="submit"]{ background: #2FB799; }
+.btn-wrapper input[type="submit"]:hover { background: #209279; }
+.btn-wrapper input[type="reset"]{ background: #F95053; }
+.btn-wrapper input[type="reset"]:hover { background: #bb3335; }
+
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender){
+        row-gap: 15px;
+    }
+}
