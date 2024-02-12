@@ -48,47 +48,48 @@
                         <th colspan="2" bgcolor="" height="21">เพิ่มข้อมูลหนังสือ</th>
                     </tr>
                     <tr>
-                        <td width='200'>รหัสหนังสือ :</td>
+                        <td align='right' width='200'>รหัสหนังสือ :</td>
                         <td width='400'><input type="text" name='bookID' size='10' maxlength='5'></td>
                     </tr>
                     <tr>
-                        <td width='200'>ชื่อหนังสือ :</td>
+                        <td align='right' width='200'>ชื่อหนังสือ :</td>
                         <td width='400'><input type="text" name='bookName' size='50' maxlength='50'></td>
                     </tr>
                     <tr>
-                        <td width='200'>ประเภทหนังสือ :</td>
+                        <td align='right' width='200'>ประเภทหนังสือ :</td>
                         <td width='400'><select name="typeID"><?php getTypeSelect(); ?></select></td>
                     </tr>
                     <tr>
-                        <td width='200'>สถานะหนังสือ :</td>
+                        <td align='right' width='200'>สถานะหนังสือ :</td>
                         <td width='400'><select name="statusID"><?php getStatusSelect(); ?></select></td>
                     </tr>
                     <tr>
-                        <td width='200'>สำนักพิมพ์ :</td>
+                        <td align='right' width='200'>สำนักพิมพ์ :</td>
                         <td width='400'><input type="text" name='publish' size='20' maxlength='25'></td>
                     </tr>
                     <tr>
-                        <td width='200'>ราคาที่ซื้อ :</td>
+                        <td align='right' width='200'>ราคาที่ซื้อ :</td>
                         <td width='400'><input type="text" name='unitPrice' size='20' maxlength='25'></td>
                     </tr>
                     <tr>
-                        <td width="200">ราคาที่เช่า :</td>
+                        <td align='right' width="200">ราคาที่เช่า :</td>
                         <td><input type="text" name="unitRent" size="20" maxlength="25"></td>
                     </tr>
                     <tr>
-                        <td width="200">จำนวนวันที่เช่า :</td>
+                        <td align='right' width="200">จำนวนวันที่เช่า :</td>
                         <td><input type="text" name="dayAmount" maxlength="25" size="20"></td>
                     </tr>
                     <tr>
-                        <td width="200">รูปภาพ :</td>
+                        <td align='right' width="200">รูปภาพ :</td>
                         <td><input type="file" name="imageFile" size="30">
                         <br><font size="2" color="#ff3300">นามสกุล .gif หรือ .jpg(เท่านั้น)</font></td>
                     </tr>
                 </table>
-                <br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:hand;">
-                <input type="reset" name="reset" value="ยกเลิก" style="cursor:hand;">
+                <br><input type="submit" name="submit" value="บันทึกข้อมูล" style="cursor:pointer;">
+                <input type="reset" name="reset" value="ยกเลิก" style="cursor:pointer;">
             </form>
             <br><br><a href="bookList1.php">กลับหน้า bookList1.php</a>;
         </center>
+        <?php mysqli_close($conn); ?>
 </body>
 </html>

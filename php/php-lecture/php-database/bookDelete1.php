@@ -1,9 +1,9 @@
 <?php
-    $bookId = $_REQUEST['bookId'];
+    $bookId = $_REQUEST['bookID'];
     $hostname = "localhost";
     $username = "root";
     $password = "";
-    $dbName = "bookStore";
+    $dbName = "bookstore";
     $conn = mysqli_connect($hostname, $username, $password);
     if (!$conn) die("ไม่สามารถติดต่อกับ mySQL ได้");
     mysqli_select_db($conn, $dbName) or die("ไม่สามารถเลือกฐานข้อมูล bookStore ได้");

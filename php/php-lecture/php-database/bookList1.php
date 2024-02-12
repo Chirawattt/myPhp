@@ -22,7 +22,9 @@
         echo "<center>
                 <br><h3>รายชื่อหนังสือ</h3>
                 <table width='500' border='0'>
-                <tr><td align='left'><a href='bookInsert1.php'>เพิ่มรายการหนังสือ</a></td></tr>
+                <tr>
+                    <td align='left'><a href='bookInsert1.php'>เพิ่มรายการหนังสือ</a></td>
+                </tr>
                 </table>
                 <br>
                 <table with='500' border='1'>
@@ -30,6 +32,7 @@
                 <th width='50'>ลำดับ</th>
                 <th width='100'>รหัสหนังสือ</th>
                 <th width='200'>ชื่อหนังสือ</th>
+                <th width='80'>ดูข้อมูล</th>
                 <th width='80'>แก้ไข</th>
                 <th width='80'>ลบ</th>
             ";
@@ -37,10 +40,11 @@
         while ($rs = mysqli_fetch_array($result)){
             echo "<tr align='center' bgcolor=''>
                     <td>$row</td>
-                    <td><a href='bookDetail1_edit.php?bookId=$rs[0]'>$rs[0]</a></td>
+                    <td><a href='bookDetail1_edit.php?bookID=$rs[0]'>$rs[0]</a></td>
                     <td align='left'>$rs[1]</td>
-                    <td><a href='bookUpdate1.php?bookId=$rs[0]'>[แก้ไข]</a></td>";
-            echo '<td><a href="bookDelete1.php?bookId='.$rs[0].'" onclick="return confirm(\' ยืนยันการลบข้อมูลหนังสือ '.$rs[1].'\')">[ลบ]</a></td>'
+                    <td align='center'><a href='bookDetail1.php?bookID=$rs[0]'>ดู</a></td>
+                    <td><a href='bookUpdate1.php?bookID=$rs[0]'>[แก้ไข]</a></td>";
+            echo '<td><a href="bookDelete1.php?bookID='.$rs[0].'" onclick="return confirm(\' ยืนยันการลบข้อมูลหนังสือ '.$rs[1].'\')">[ลบ]</a></td>'
                 .'</tr>';
             $row++;
         }
