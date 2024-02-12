@@ -89,7 +89,8 @@
                 // Format the date in the desired formet with B.E year
                 $beYear = $dateTime->format('Y')+543;
                 $birthDate = $dateTime->format('d/m') . '/' . $beYear;
-                
+                // Calculate age
+                $age = (date('Y')+543) - $beYear - 1;
                 echo "
     <section class='container'>
         <header>ส่วนแสดงผลแบบฟอร์ม</header>
@@ -127,6 +128,10 @@
                     <label>วันเกิด</label>
                     <input type='text' name='birthDate' disabled value='". $birthDate ."'>
                 </div>
+                <div class='input-box'>
+                    <label>อายุ</label>
+                    <input type='text' disabled value='". $age ."'>
+                </div>
             </div>
             <div class='column'>
                 <div class='input-box'>
@@ -141,6 +146,7 @@
                     <label>เพศ</label>
                     <input type='text' disabled value='". $gender ."'>
                 </div>
+                
             </div>
 
 
