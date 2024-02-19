@@ -60,7 +60,7 @@
         }
         /* Style for the table */
         table {
-            width: 100%;
+            width: 60%;
             border-collapse: collapse;
             margin-bottom: 20px; /* Adjust margin as needed */
         }
@@ -137,6 +137,9 @@
             }
         ?>
     </table>
-    <?php mysqli_close($conn); ?>
+    <?php 
+        echo "<br><br><a href='bookList1.php'>Back to List of all Books</a>";
+        mysqli_close($conn); 
+    ?>
 </body>
 </html>

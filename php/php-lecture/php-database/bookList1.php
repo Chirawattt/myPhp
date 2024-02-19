@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookList1.php</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Mitr", sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h3{
+            font-size: 30px;
+            font-weight: 500;
+        }
+        th{
+            font-size: 18px;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <?php
@@ -20,13 +46,13 @@
         $sql = "select * from book order by bookID";
         $result = mysqli_query($conn, $sql);
         echo "<center>
-                <br><h3>รายชื่อหนังสือ</h3>
+                <h3>รายชื่อหนังสือ</h3>
+                <br>
                 <table width='500' border='0'>
                 <tr>
-                    <td align='left'><a href='bookInsert1.php'>เพิ่มรายการหนังสือ</a></td>
+                    <td align='center'><a href='bookInsert1.php'>เพิ่มรายการหนังสือ</a></td>
                 </tr>
                 </table>
-                <br>
                 <table with='500' border='1'>
                 <tr bgcolor=''>
                 <th width='50'>ลำดับ</th>
@@ -40,7 +66,7 @@
             echo "<tr align='center' bgcolor=''>
                     <td>$row</td>
                     <td><a href='bookDetail1.php?bookID=$rs[0]'>$rs[0]</a></td>
-                    <td align='left'>$rs[1]</td>
+                    <td align='center'>$rs[1]</td>
                     <td><a href='bookUpdate1.php?bookID=$rs[0]'>[แก้ไข]</a></td>";
             echo '<td><a href="bookDelete1.php?bookID='.$rs[0].'" onclick="return confirm(\' ยืนยันการลบข้อมูลหนังสือ '.$rs[1].'\')">[ลบ]</a></td>'
                 .'</tr>';
