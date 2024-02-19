@@ -40,25 +40,87 @@
     if (isset($_POST['btnSubmit'])) {
                 // function check Data in variable
                 function checkData($data){
-                    if(empty($data)) return "-";
+                    if(empty(trim($data))) return "-";
                     else return $data;
                 }
+                // function check Data in variable can not be null
+                function checkDataNull($data){
+                    if(empty(trim($data))) {
+                        echo "<script>
+                        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                        history.back();
+                        </script>";
+                        exit();
+                    }
+                    else return $data;
+                }
+
+                function checkName($data){
+                    if(empty(trim($data))) {
+                        echo "<script>
+                        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                        history.back();
+                        </script>";
+                        exit();
+                    }
+                    else if (!preg_match("/^[ก-ฯะ-์a-zA-Z]+$/",$data)) {
+                        echo "<script>
+                                alert('Not use some character');
+                                history.back();
+                            </script>";
+                        exit();
+                    }else return $data;
+                }
+
+                function checkEmail($data){
+                    if(empty(trim($data))) {
+                        echo "<script>
+                        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                        history.back();
+                        </script>";
+                        exit();
+                    }else if(!filter_var(trim($data), FILTER_VALIDATE_EMAIL)){
+                        echo "<script>
+                                alert('Your Email is not valid email address');
+                                history.back();
+                            </script>";
+                        exit();
+                    }else return $data;
+                }
+
+                function checkTelephone($data){
+                    if(empty(trim($data))) {
+                        echo "<script>
+                        alert('กรุณากรอกข้อมูลให้ครบถ้วน');
+                        history.back();
+                        </script>";
+                        exit();
+                    }else if (!ctype_digit(trim($data))) {
+                        echo "<script>
+                                alert('กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง');
+                                history.back();
+                            </script>";
+                        exit();
+                    }else return $data;
+                }
+                
         
                 // Personal Data
-                $fname = $_POST['fname'];
-                $lname = $_POST['lname'];
-                $nickname = $_POST['nickname'];
-                $email = $_POST['email'];
-                $phoneNumber = $_POST['telephone'];
-                $birthDate = $_POST['birthDate'];
-                $gender = $_POST['gender'];
-                $height = $_POST['height'];
-                $weight = $_POST['weight'];
+                $fname = checkName($_POST['fname']);
+                $lname = checkName($_POST['lname']);
+
+                $nickname = checkDataNull($_POST['nickname']);
+                $email = checkEmail($_POST['email']);
+                $phoneNumber = checkTelephone($_POST['telephone']);
+                $birthDate = checkDataNull($_POST['birthDate']);
+                $gender = checkDataNull($_POST['gender']);
+                $height = checkDataNull($_POST['height']);
+                $weight = checkDataNull($_POST['weight']);
         
                 // Previous School
-                $oldSchool = $_POST['old-school'];
-                $oldEducation = $_POST['old-education'];
-                $gpa = $_POST['gpa'];
+                $oldSchool = checkDataNull($_POST['old-school']);
+                $oldEducation = checkDataNull($_POST['old-education']);
+                $gpa = checkDataNull($_POST['gpa']);
         
                 // Address Data
                 $houseNumber =  checkData($_POST['house-number']);
@@ -70,6 +132,8 @@
                 $houseParish =  checkData($_POST['house-parish']);
                 $housePostal =  checkData($_POST['house-postal']);
         
+                $address = $houseNumber. ' ' .$houseGroup. ' ' .$houseAlley.
+                ' ' .$houseProvince. ' ' .$houseStreet. ' ' .$houseDistrict. ' ' .$houseParish. ' ' .$housePostal;
                 // Hobby Data
                 if(isset($_POST['myHobby'])) { // Check if myHobby has data?
                     $hobby = $_POST['myHobby'];
@@ -238,6 +302,24 @@
             </form>
     </section>
     ";
+
+    // Insert Data to Database
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbName = "user";
+    $conn = mysqli_connect($hostname, $username, $password);
+    echo '<center>';
+    if (!$conn) die("ไม่สามารถติดต่อกับ mySQL ได้");
+    mysqli_select_db($conn, $dbName) or die("ไม่สามารถเลือกฐานข้อมูล bookStore ได้");
+    mysqli_query($conn,"set character_set_connection=utf8mb4");
+    mysqli_query($conn,"set character_set_client=utf8mb4");
+    mysqli_query($conn,"set character_set_results=utf8mb4");
+    $sql = "insert into user(fname, lname, nickname, email, phoneNumber, birthDate, gender,
+    height, weight, age, oldSchool, oldEducate, gpa, address) values ('$fname', '$lname', '$nickname', '$email', '$phoneNumber',
+    '$birthDate', '$gender', '$height', '$weight', '$age', '$oldSchool', '$oldEducation', '$gpa', '$address')";
+    mysqli_query($conn, $sql) or die("insert ลงตาราง user มีข้อผิดพลาดเกิดขึ้น".mysqli_error());
+    mysqli_close($conn);
     } else {
         echo "
     <section class='container'>
@@ -270,7 +352,7 @@
             <div class='column'>
                 <div class='input-box'>
                     <label>เบอร์ติดต่อ<span class='require'> *</span></label>
-                    <input type='text' name='telephone' placeholder='012-345-6789' required>
+                    <input type='text' name='telephone' minlength='9' maxlength='10' placeholder='012-345-6789' required>
                 </div>
                 <div class='input-box'>
                     <label>วันเกิด<span class='require'> *</span></label>
